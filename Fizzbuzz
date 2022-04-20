@@ -1,0 +1,196 @@
+ // How to create a variable
+
+var name = "Kwon Eunbi";
+console.log(name);
+
+// Data type and it's operation 
+// String (huruf, perkataan ataupun ayat)
+
+var place  = "Bangi";
+console.log(place);
+
+// + operation (concatenation - combining two string/word/sentence)
+
+var message = "My name is "+name;
+console.log(message);
+
+var anotherMessage = 'Ini menggunakan single quote';
+console.log(anotherMessage);
+
+var thirdMessage = "Will we meet again?";
+var forthMessage = 'I miss you"';
+console.log(thirdMessage);
+console.log(forthMessage);
+
+// Number 
+
+var a = 10;
+var b = 3;
+
+// Number operation
+
+var sum = a + b;
+var minus = a - b;
+var product = a * b;
+var division = a / b;
+var modulo = a % b; // baki operasi bahagi 10 / 3 = 3 bakinya 1
+console.log(sum);
+console.log(minus);
+console.log(product);
+console.log(division);
+console.log(modulo);
+
+/// Boolean 
+var sleepy = true;
+var tired = false;
+
+ /// && , || , !
+
+var rehat = sleepy && tired;
+console.log(rehat);
+
+var take5 = sleepy || tired;
+console.log(take5);
+
+// if else (perbandingan) // comparison
+
+var age = 13;
+
+if (age < 18) {
+  console.log("You cannot watch the movie");
+} else {
+  console.log("You can watch the movie");
+}
+
+if (age < 12){
+  console.log("You cannot watch the movie");
+}
+else if (age < 18){
+  console.log("You can watch with parent");
+}
+else {
+  console.log("You can watch with parents")
+}
+
+// Create a code that will tell if a number is odd or even number
+var number1 = 18 /// 13 is an odd number. , 18 = 18 is an even number, 37 = 37 is an odd numnber
+
+if (number1 % 2  == 1) {
+  console.log(number1+" is an odd number.");
+}
+else {
+  console.log(number1+ " is an even number.");
+}
+
+// for loop - pengulangan
+// Dari 0, sehingga 10, setiap round tambah 1
+for (var i = 0; i< 10;i++){
+  console.log(i);
+}
+
+// Dari 10, sehingga 0, setiap round tolak 1
+for (var i = 10; i > 0; i--){
+  console.log(i);
+}
+// Dari 1, sehingga 10, setiap round + 2 (Nombor ganjil antara 1 hingga 10)
+for (var i = 1; i < 10; i+=2){
+  console.log(i);
+}
+
+var sifir = 3;
+  var berapakali = 12;
+var hasildarab;
+for (var i = 0; i< berapakali;i++){
+  hasildarab = i*sifir;
+  console.log(i + "x" + sifir + "=" + hasildarab);
+}
+
+// 3 = fizz 5 = buzz
+// 3 langkah 
+//  1)Buat 1 - 12
+// 2)Buat 1 x 3 =
+// 3) 1 x 3 = 3
+
+
+for (var i = 1; i <= 100; i++) {
+      if (i % 3 == 0 && i % 5 == 0) {
+      console.log("FizzBuzz");
+    }
+else if (i % 3 == 0) {
+console.log("Fizz"); 
+    }
+    else if (i % 5 == 0) {
+      console.log("Buzz");
+}
+  
+    else { console.log(i); }
+}
+
+
+// Declaring a function
+function sayHello () {
+  console.log("Hello");
+}
+
+// Invoking/ calling a function - Guna
+sayHello();
+
+
+function sayIZONE () {
+  console.log("It's been a year since IZ*ONE disbanded")
+}
+sayIZONE();
+
+// Function with parameter
+function saygoodbye(name) {
+  console.log("goodbye " + name);
+}
+saygoodbye (" Kwon Eunbi");
+saygoodbye ("Miyawaki Sakura");
+
+//Function with return
+function sumNumber(a,b) { 
+return a+b;
+}
+
+console.log(sumNumber (3,6));
+
+// Function with two answers
+function areaVolume(height, width, length) {
+  //Array
+  return [width*length, width*length*height];
+}
+console.log(areaVolume(3,4,5));
+
+//Create a function minMaxAvg
+// That will accept 3 parameter 10, 7, 18
+//It will return the smallest number 7, the largest number 18 and the average 10+7+18/3
+
+function minMaxAvg (a, b, c) {
+  var min = 7 ;
+  var Max = 18 ;
+  var Avg = (a+b+c) /3;
+
+
+ if (a > b) {
+   
+   if ( a > c) {
+     max = a;
+   }
+ }
+  // b lagi besar dari a
+  else {
+    if ( b > c) {
+      max = b;
+    }
+    else {
+      max = c;
+    }
+  }
+ 
+  return [min, Max, Avg]
+ }
+
+console.log(minMaxAvg(10, 7, 18));
+  console.log(minMaxAvg(1,2,3));
+  console.log(minMaxAvg(3,1,2));
